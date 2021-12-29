@@ -1,0 +1,32 @@
+{
+  "name": "portfolio1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "portfolio-site": "npm start --prefix portfolio-site",
+    "dev": "concurrently \"npm run  server\" \"npm run portfolio-site\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix portfolio-site && npm run build --prefix portfolio-site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SODIZDAROGLU/portfolio1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SODIZDAROGLU/portfolio1/issues"
+  },
+  "homepage": "https://github.com/SODIZDAROGLU/portfolio1#readme",
+  "dependencies": {
+    "concurrently": "^6.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15"
+  }
+}
