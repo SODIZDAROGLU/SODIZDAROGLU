@@ -9,8 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/", contactRoute);
-app.use(express.static("portfolio-site/build"));
+// app.use("/", contactRoute);
+app.use(express.static("portfolio-site/src"));
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname, "portfolio-site", "build", "index.html"))
   );
